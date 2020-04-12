@@ -204,7 +204,7 @@ function fetchWeather ({latitude: lat, longitude: lon}) {
         units: 'metric',
     });
 
-    const schema = 'http://'
+    const schema = 'https://'
     const currentWeatherUrlAPI = `${schema}api.openweathermap.org/data/2.5/weather`;
     const nextDayForecastUrlAPI = `${schema}api.openweathermap.org/data/2.5/forecast`;
 
