@@ -1,0 +1,238 @@
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes shake {
+
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+body {
+    all: unset;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.app {
+    min-width: 320px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) and (min-height: 768px) {
+    .app {
+        margin-top: 150px;
+    }
+}
+
+
+.icon {
+    display: none;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon svg {
+    width: 200px;
+}
+
+.icon__loading svg {
+    animation: pulse 2s infinite;
+}
+
+.icon__geolocation svg,
+.icon__error svg {
+    animation: shake 1s;
+}
+
+.icon__text {
+    margin-top: 20px;
+}
+
+
+.app_state_loading .icon__loading {
+    display: flex;
+}
+
+.app_state_geolocation .icon__geolocation {
+    display: flex;
+}
+
+.app_state_error .icon__error {
+    display: flex;
+}
+
+.app_state_loading .content,
+.app_state_geolocation .content,
+.app_state_error .content {
+    display: none;
+}
+
+
+.content {
+    margin-top: 30px;
+}
+
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInLeft 1s;
+}
+
+.current-weather__city {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: bold;
+
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.current-weather__weather {
+    margin-bottom: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-weather__temp {
+    font-size: 54px;
+    line-height: 54px;
+    font-weight: bold;
+}
+
+.current-weather__temp::after {
+    content: '°';
+}
+
+.current-weather__icon {
+    width: 100px;
+}
+
+
+.current-weather__description,
+.current-weather__feels-like {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.current-weather__description::first-letter,
+.current-weather__feels-like::first-letter {
+    text-transform: capitalize;
+}
+
+
+.forecast {
+    margin: 30px 20px;
+    animation: fadeInRight 1s;
+}
+
+.forecast__hours {
+    display: flex;
+    align-items: center;
+}
+
+.forecast__time {
+    width: 54px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.forecast__icon {
+    width: 50px;
+    margin: -9px 5px;
+}
+
+.forecast__description {
+    margin-right: auto;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 320px) {
+    .forecast__description {
+        max-width: 100px;
+    }
+}
+
+@media (min-width: 375px) {
+    .forecast__description {
+        max-width: 154px;
+    }
+}
+
+.forecast__temp,
+.forecast__feels-like {
+    width: 32px;
+    text-align: right;
+}
+
+.forecast__temp {
+    font-weight: bold;
+}
+
+.forecast__feels-like {
+    opacity: .7;
+}
