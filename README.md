@@ -14,9 +14,15 @@ Github Pages: https://griashiro.github.io/weather/
 - Информация о погоде прилетает от [OpenWeatherMap API](https://openweathermap.org/api)
 - Приложение умеет кешировать ответ от API на 15 минут, чтобы не делать лишних запросов
 
+## Было бы классно сделать
+
+- Добавить рекомендации о том, как одеваться по погоде
+- Получать данные из других сервисов, например, Яндекс.Погода и Gismeteo
+
 ## Благодарности
 
 <div>За иконки спасибо
 <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>,
 <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>,
+<a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a>,
 <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>. Сайт <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
