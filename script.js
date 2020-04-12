@@ -433,7 +433,7 @@ function createElem (tag, className, textContent) {
  * @returns {HTMLElement}
  */
 function createIcon (iconId, className) {
-    const src = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
+    const src = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
     const img = document.createElement('img');
     img.classList.add(className);
     img.alt = TEXTS.ICON_ALT;
