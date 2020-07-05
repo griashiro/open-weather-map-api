@@ -6,7 +6,7 @@
 
 Зачем тащить Redux, сборку на Webpack и бекенд на Node, когда задача решается простым JavaScript? 😌
 
-Github Pages: https://griashiro.github.io/weather/
+Github Pages: https://griashiro.github.io/open-weather-map-api/
 
 ## Особенности
 
